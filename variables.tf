@@ -7,3 +7,7 @@ variable "ovh_service_name" {
 variable "cluster_name" {
   type = string
 }
+
+variable "max_nodes" {
+  type = number
+}

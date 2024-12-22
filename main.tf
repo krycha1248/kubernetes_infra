@@ -12,7 +12,7 @@ resource "ovh_cloud_project_kube_nodepool" "node_pool_d2_4" {
   flavor_name   = "d2-4"
   autoscale     = true
   desired_nodes = 1
-  max_nodes     = 2
+  max_nodes     = var.max_nodes
   min_nodes     = 1
 }
 
