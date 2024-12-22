@@ -1,0 +1,3 @@
+*.terraform*
+*.tfstate*
+sensitive_variables.tf
