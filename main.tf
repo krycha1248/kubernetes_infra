@@ -31,3 +31,16 @@ resource "local_file" "kube_config_file" {
   filename        = pathexpand("~/.kube/config")
   file_permission = 0600
 }
+
+resource "helm_release" "cert_manager" {
+  name       = "cert-manager"
+  namespace  = "cert-manager"
+  repository = "https://charts.jetstack.io"
+  chart      = "cert-manager"
+  create_namespace = true
+
+  set {
+    name  = "installCRDs"
+    value = "true"
+  }
+}
