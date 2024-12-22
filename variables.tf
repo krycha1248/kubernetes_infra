@@ -9,5 +9,6 @@ variable "cluster_name" {
 }
 
 variable "max_nodes" {
-  type = number
+  type    = number
+  default = 2
 }
